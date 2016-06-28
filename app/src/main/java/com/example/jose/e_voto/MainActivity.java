@@ -122,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Correo o contraseña invalido",Toast.LENGTH_LONG).show();
             }else if(result.equalsIgnoreCase("exception")||result.equalsIgnoreCase("unsuccessful")){
                 Toast.makeText(getApplicationContext(),"OOPS! Algo salio mal. Problemas de conexion",Toast.LENGTH_LONG).show();
+                //comentario
             }
 
         }
