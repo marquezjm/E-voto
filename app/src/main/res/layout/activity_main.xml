@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jose.e_voto.MainActivity">
+    tools:context="com.example.jose.e_voto.MainActivity"
+    android:background="#7f919e">
 
     <EditText
         android:layout_width="wrap_content"
@@ -17,7 +18,9 @@
         android:id="@+id/etpass"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:hint="Ingrese su contraseña" />
+        android:hint="Ingrese su contraseña"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -27,7 +30,9 @@
         android:id="@+id/etcorreo"
         android:layout_above="@+id/etpass"
         android:layout_centerHorizontal="true"
-        android:hint="Ingrese su correo" />
+        android:hint="Ingrese su correo"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,14 +42,45 @@
         android:id="@+id/textView"
         android:layout_above="@+id/etcorreo"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp" />
+        android:layout_marginBottom="50dp"
+        android:textColor="#ffffff" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hecho"
         android:id="@+id/button"
+        android:onClick="login"
+        android:background="@drawable/boton_redondo"
+        android:backgroundTint="#ffffff"
         android:layout_below="@+id/etpass"
         android:layout_centerHorizontal="true"
-        android:onClick="login" />
+        android:layout_marginTop="21dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Aun no tienes una cuenta?"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/button"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button"
+        android:layout_marginTop="32dp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Presiona aqui"
+        android:id="@+id/textView3"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="#d85e7c"
+        android:onClick="registro"
+        android:nestedScrollingEnabled="false" />
 </RelativeLayout>

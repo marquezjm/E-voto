@@ -1,6 +1,7 @@
 package com.example.jose.e_voto;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -116,15 +117,20 @@ public class MainActivity extends AppCompatActivity {
             if(campos[0].equalsIgnoreCase("1")){
                 //Lanzar la segunda vista
                 Toast.makeText(getApplicationContext(),"Inicio correcto, bienvenid@ "+campos[1],Toast.LENGTH_LONG).show();
+
             }else if(result.equalsIgnoreCase("")){
                 etpass.setText("");
                 etcorreo.setText("");
                 Toast.makeText(getApplicationContext(),"Correo o contraseña invalido",Toast.LENGTH_LONG).show();
             }else if(result.equalsIgnoreCase("exception")||result.equalsIgnoreCase("unsuccessful")){
                 Toast.makeText(getApplicationContext(),"OOPS! Algo salio mal. Problemas de conexion",Toast.LENGTH_LONG).show();
-                //comentario
             }
 
         }
+    }
+
+    public void registro(View view){
+        Intent i=new Intent(getApplicationContext(),Registro.class);
+        startActivity(i);
     }
 }
