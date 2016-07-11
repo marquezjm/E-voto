@@ -116,8 +116,13 @@ public class MainActivity extends AppCompatActivity {
             String[]campos=texto.split("\\s+");
             if(campos[0].equalsIgnoreCase("1")){
                 //Lanzar la segunda vista
-                Toast.makeText(getApplicationContext(),"Inicio correcto, bienvenid@ "+campos[1],Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Inicio correcto, bienvenid@ "+campos[2],Toast.LENGTH_LONG).show();
+                Intent i=new Intent(MainActivity.this,Voto.class);
+                i.putExtra("matricula",campos[1]);
+                startActivity(i);
+            }else if(campos[0].equalsIgnoreCase("2")){
 
+                Toast.makeText(getApplicationContext(),"Lo sentimos, usted ya realizó su voto ",Toast.LENGTH_SHORT).show();
             }else if(result.equalsIgnoreCase("")){
                 etpass.setText("");
                 etcorreo.setText("");

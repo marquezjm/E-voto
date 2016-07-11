@@ -69,4 +69,15 @@
         android:layout_alignEnd="@+id/correo"
         android:background="@drawable/boton_redondo"
         android:onClick="enviar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Registro"
+        android:id="@+id/textView4"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="44dp"
+        android:layout_above="@+id/matricula"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

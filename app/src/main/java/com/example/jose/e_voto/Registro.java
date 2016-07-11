@@ -137,6 +137,7 @@ public class Registro extends AppCompatActivity {
                 Intent i= new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(i);
                 Toast.makeText(getApplicationContext(),"El usuario fue creado correctamente ",Toast.LENGTH_LONG).show();
+                finish();
             }else if(campos[0].equalsIgnoreCase("0")){
                 mat.setText("");
                 pass.setText("");
